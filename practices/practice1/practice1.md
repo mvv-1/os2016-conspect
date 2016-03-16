@@ -32,7 +32,9 @@ int write(int fd, void* src, size_t size)
 
 > fd - file descriptor; src - where to take (buffer); size - how much to write in bytes.
 
-`int close(int fd)` 
+```c
+int close(int fd)
+```
 
 > Закрывает fd (как неожиданно-то, блять)
 
