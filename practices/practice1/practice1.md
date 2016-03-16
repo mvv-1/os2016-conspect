@@ -8,13 +8,17 @@ read
 write
 close**
 
-`int open(char *path, int flags)`
+```c
+int open(char *path, int flags)
+```
 
 `O_RDONLY | O_WRONLY | O_RDWR | O_APPEND` - флаги доступа.
 
 > Вернёт число - файловый дескриптор
 
-`int read(int fd, void* dst, size_t size)`
+```c
+int read(int fd, void* dst, size_t size)
+```
 
 > fd - file descriptor;
 dst - where to read up (buffer);
@@ -22,7 +26,9 @@ size - how much to read in bytes.
 Возвращает ssize_t (< 0 - ERROR, 0 - input is over).
 Может прочитать меньше (короче в мане всё есть)
 
-`int write(int fd, void* src, size_t size)`
+```c
+int write(int fd, void* src, size_t size)
+```
 
 > fd - file descriptor; src - where to take (buffer); size - how much to write in bytes.
 
@@ -36,7 +42,7 @@ size - how much to read in bytes.
 
 **hello.c**
 
-```
+```c
 #include <stdio.h>
 void hello() {
 	printf("Hello World!"\n");
@@ -44,7 +50,7 @@ void hello() {
 ```
 
 **main.c**
-```
+```c
 void main(int argc, char** argv) {
 	hello();
 }
